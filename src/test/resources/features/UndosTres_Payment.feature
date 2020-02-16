@@ -15,5 +15,8 @@ And Enter CVV as "111"
 And Enter cardmail as "test@test.com"
 Then Click on Pagar con Tarjeta
 
-* Enter email as "marze.zr@gmail.com"
-* Enter password as "123456"
+Given Verify pop up appeared
+When Enter email as "marze.zr@gmail.com"
+And Enter password as "123456"
+Then Click on Acceso
+Then Recharge is successful

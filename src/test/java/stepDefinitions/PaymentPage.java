@@ -41,21 +41,21 @@ public class PaymentPage {
 
 	@And("Enter month as {string} and year as {string}")
 	public void enter_month_and_year(String month, String year) {
-		WebElement monthElement = driver.findElement(By.xpath("//div[contains(@class,'field')]//input[@name='expmonth' and @style]"));
+		WebElement monthElement = driver.findElement(By.xpath("//div[contains(@class,'row')]//div[contains(@class,'form')]//input[@name='expmonth']"));
 		monthElement.sendKeys(month);
 		
-		WebElement yearElement = driver.findElement(By.xpath("//div[contains(@class,'field')]//input[@name='expyear' and @style]"));
+		WebElement yearElement = driver.findElement(By.xpath("//div[contains(@class,'row')]//div[contains(@class,'form')]//input[@name='expyear']"));
 		yearElement.sendKeys(year);
 	}
 
 	@And("Enter CVV as {string}")
 	public void enter_CVV(String cvv) {
-		driver.findElement(By.xpath("//div[contains(@class,'field')]//input[@name='cvvno' and @style]")).sendKeys(cvv);				
+		driver.findElement(By.xpath("//div[contains(@class,'row')]//div[contains(@class,'form')]//input[@name='cvvno']")).sendKeys(cvv);				
 	}
 
 	@And("Enter cardmail as {string}")
 	public void enter_cardmail(String mail) {
-		driver.findElement(By.xpath("//div[contains(@class,'field')]//input[@type='email' and @style]")).sendKeys(mail);
+		driver.findElement(By.xpath("//label[contains(text(),'Correo')]//ancestor::div[contains(@class,'info')]//input[@name='txtEmail']")).sendKeys(mail);
 	}
 
 	@Then("Click on Pagar con Tarjeta")
