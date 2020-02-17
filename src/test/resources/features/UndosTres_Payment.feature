@@ -1,22 +1,23 @@
-Feature: Title of your feature
+Feature: UndosTres Payment
  
-Scenario: Title of your scenario
-Given I open the site "https://prueba.undostres.com.mx"
-When Select Operador as "Telcel"
-And Enter Mobile number as "5523261151"
-And Enter Recharge amount as "$10"
-Then Click on Siguiente
+Scenario: Verify a successful recharge on UndosTres
 
-Given Verify Payment Page landed
-When Enter cardname as "Test"
-And Enter cardnumber as "4111111111111111"
-And Enter month as "11" and year as "2025"
-And Enter CVV as "111"
-And Enter cardmail as "test@test.com"
-Then Click on Pagar con Tarjeta
+* I open the site "https://prueba.undostres.com.mx"
+* Select Operador as "Telcel"
+* Enter Mobile number as "5523261151"
+* Enter Recharge amount as "$10"
+* Click on Siguiente
 
-Given Verify pop up appeared
-When Enter email as "marze.zr@gmail.com"
-And Enter password as "123456"
-Then Click on Acceso
-Then Recharge is successful
+* Verify Payment Page landed
+* Enter cardname as "Test"
+* Enter cardnumber as "4111111111111111"
+* Enter month as "11" and year as "2025"
+* Enter CVV as "111"
+* Enter cardmail as "test@test.com"
+* Click on Pagar con Tarjeta
+
+* Verify pop up appeared
+* Enter email as "marze.zr@gmail.com"
+* Enter password as "123456"
+* Click on Acceso
+* Recharge is successful
